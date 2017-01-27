@@ -46,12 +46,17 @@ response looks like:
 Simply call rnsync_key_generator.genkey('dbname') to get the db credentials
 
 ```javascript
-rnsync_key_generator.genkey('u' + userId)
-.then( (dbCredentials) =>
+router.get( '/', function ( req, res, next )
 {
-    res.status( 200 ).json( { dbCredentials } )
-})
-.catch( (error) => {
-    res.status( 500 ).json( { error } )
-})
+    let userId = req.user.sub;
+
+    rnsync_key_generator.genkey('u' + userId)
+     .then( (dbCredentials) =>
+     {
+         res.status( 200 ).json( { dbCredentials } )
+     })
+     .catch( (error) => {
+         res.status( 500 ).json( { error } )
+     })
+}
 ```
