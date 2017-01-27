@@ -16,7 +16,7 @@ npm install --save rnsync_key_generator
 The database name must start with a character and only lowercase characters (a-z), digits (0-9), and any of the characters _, $, (, ), +, -, and / are allowed. 
 
 #### Router
-Use
+
 ```javascript
 let express = require('express');
 let rnsync_key_generator = require('rnsync_key_generator');
@@ -27,7 +27,7 @@ rnsync_key_generator.init("https://user:pass@xxx-bluemix.cloudant.com");
 let app = express();
 app.use('/genkey', rnsync_key_generator.router);
 ```
-The router accepts a GET request and expects there to be a query parameter 'dbname'.  For the database name only lowercase characters (a-z), digits (0-9), and any of the characters _, $, (, ), +, -, and / are allowed. 
+The router accepts a GET request and expects there to be a query parameter 'dbname'. 
 
 ```
 http://server.com/genkey?dbname=UniqueDbName
