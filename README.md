@@ -46,6 +46,8 @@ response looks like:
 Simply call rnsync_key_generator.genkey('dbname') to get the db credentials
 
 ```javascript
+rnsync_key_generator.init("https://user:pass@xxx-bluemix.cloudant.com");
+
 router.get( '/genkey', function ( req, res, next )
 {
     let userId = req.user.sub;
