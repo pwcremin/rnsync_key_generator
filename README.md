@@ -3,9 +3,6 @@
 ## About
 
 rnsync_key_generator handles the creation of database and generation of credentials as recommended in the [Cloudant Sync doc](https://github.com/cloudant/sync-android/blob/master/doc/replication.md). This package was made to be used with [RNSync](https://github.com/pwcremin/RNSync), but can of course be used however you wish.
-
-## Udates
-
  
 ## Installation
 
@@ -16,6 +13,10 @@ npm install --save rnsync_key_generator
 
 ## Usage
 
+The database name must start with a character and only lowercase characters (a-z), digits (0-9), and any of the characters _, $, (, ), +, -, and / are allowed. 
+
+### Router
+Use
 ```javascript
 let express = require('express');
 let rnsync_key_generator = require('rnsync_key_generator');
@@ -40,3 +41,17 @@ response looks like:
  "key": "blentfortedsionstrindigl"
  }
  ```
+### Genkey
+
+Simply call rnsync_key_generator.genkey('dbname') to get the db credentials
+
+```javascript
+rnsync_key_generator.genkey('u' + userId)
+        .then( (dbCredentials) =>
+        {
+            res.status( 200 ).json( { dbCredentials } )
+        })
+        .catch( (error) => {
+            res.status( 500 ).json( { error } )
+        })
+        ```
