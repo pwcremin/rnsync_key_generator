@@ -1,0 +1,28 @@
+{
+  "name": "rnsync_key_generator",
+  "version": "1.0.0",
+  "description": "Secure way to create database and credentials for devices using RNSync ",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwcremin/rnsync_key_generator.git"
+  },
+  "keywords": [
+    "RNSync",
+    "Cloudant"
+  ],
+  "author": "Patrick Cremin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pwcremin/rnsync_key_generator/issues"
+  },
+  "homepage": "https://github.com/pwcremin/rnsync_key_generator#readme"
+}
