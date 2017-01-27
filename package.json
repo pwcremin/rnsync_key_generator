@@ -1,6 +1,6 @@
 {
   "name": "rnsync_key_generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Secure way to create database and credentials for devices using RNSync ",
   "main": "index.js",
   "dependencies": {
