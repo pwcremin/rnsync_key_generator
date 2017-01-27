@@ -2,7 +2,7 @@
 
 ## About
 
-rnsync_key_generator will communicate with Cloudant to create new database and retrieve credentials for that database.  This package was made to be used with [RNSync](https://github.com/pwcremin/RNSync), but can of course be used however you wish.
+rnsync_key_generator handles the creation of database and generation of credentials as recommended in the [Cloudant Sync doc](https://github.com/cloudant/sync-android/blob/master/doc/replication.md). This package was made to be used with [RNSync](https://github.com/pwcremin/RNSync), but can of course be used however you wish.
 
 ## Udates
 
