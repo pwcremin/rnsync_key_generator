@@ -20,6 +20,7 @@ npm install --save rnsync_key_generator
 let express = require('express');
 let rnsync_key_generator = require('rnsync_key_generator');
 
+// You can retrieve your cloudant_url by accessing the Cloudant Service Credentials from your Bluemix.net dashboard
 rnsync_key_generator.init("https://user:pass@xxx-bluemix.cloudant.com");
 
 let app = express();
