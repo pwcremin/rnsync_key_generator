@@ -30,7 +30,7 @@ app.use('/genkey', rnsync_key_generator.router);
 The router accepts a GET request and expects there to be a query parameter 'dbname'. 
 
 ```
-http://server.com/genkey?dbname=UniqueDbName
+http://server.com/genkey?dbname=mydbname
 ```
 
 response looks like:
