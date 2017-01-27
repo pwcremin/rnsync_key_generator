@@ -16,7 +16,7 @@ npm install --save rnsync_key_generator
 
 ## Usage
 
-```ruby
+```javascript
 let express = require('express');
 let rnsync_key_generator = require('rnsync_key_generator');
 
