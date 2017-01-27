@@ -26,7 +26,7 @@ rnsync_key_generator.init("https://user:pass@xxx-bluemix.cloudant.com");
 let app = express();
 app.use('/genkey', rnsync_key_generator.router);
 ```
-The router accepts a GET request and expects there to be a query parameter 'dbname'
+The router accepts a GET request and expects there to be a query parameter 'dbname'.  For the database name only lowercase characters (a-z), digits (0-9), and any of the characters _, $, (, ), +, -, and / are allowed. 
 
 ```
 http://server.com/genkey?dbname=UniqueDbName
