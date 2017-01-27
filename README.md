@@ -15,7 +15,7 @@ npm install --save rnsync_key_generator
 
 The database name must start with a character and only lowercase characters (a-z), digits (0-9), and any of the characters _, $, (, ), +, -, and / are allowed. 
 
-### Router
+#### Router
 Use
 ```javascript
 let express = require('express');
@@ -41,17 +41,17 @@ response looks like:
  "key": "blentfortedsionstrindigl"
  }
  ```
-### Genkey
+#### Genkey
 
 Simply call rnsync_key_generator.genkey('dbname') to get the db credentials
 
 ```javascript
 rnsync_key_generator.genkey('u' + userId)
-        .then( (dbCredentials) =>
-        {
-            res.status( 200 ).json( { dbCredentials } )
-        })
-        .catch( (error) => {
-            res.status( 500 ).json( { error } )
-        })
-        ```
+.then( (dbCredentials) =>
+{
+    res.status( 200 ).json( { dbCredentials } )
+})
+.catch( (error) => {
+    res.status( 500 ).json( { error } )
+})
+```
