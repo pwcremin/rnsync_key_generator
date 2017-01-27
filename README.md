@@ -46,7 +46,7 @@ response looks like:
 Simply call rnsync_key_generator.genkey('dbname') to get the db credentials
 
 ```javascript
-router.get( '/', function ( req, res, next )
+router.get( '/genkey', function ( req, res, next )
 {
     let userId = req.user.sub;
 
