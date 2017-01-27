@@ -98,7 +98,7 @@ function assignKeyToDatabase( data )
             {
                 reject( err )
             }
-            
+
             if ( response.statusCode !== 200 )
             {
                 reject( 'database security update failed: ' + response.statusCode );
@@ -109,6 +109,19 @@ function assignKeyToDatabase( data )
     } );
 }
 
+function genkey( dbname )
+{
+    if ( !dbname )
+    {
+        throw 'no dbname';
+    }
+
+    let data = { dbname: dbname };
+
+    return createDatabase( data )
+        .then( generateApiKey )
+        .then( assignKeyToDatabase )
+}
 
 router.get( '/', ( req, res ) =>
 {
@@ -120,11 +133,7 @@ router.get( '/', ( req, res ) =>
         return;
     }
 
-    let data = { dbname: dbname };
-
-    createDatabase( data )
-        .then( generateApiKey )
-        .then( assignKeyToDatabase )
+    genkey( dbname )
         .then( function ( data )
         {
             res.json( data );
@@ -137,5 +146,6 @@ router.get( '/', ( req, res ) =>
 
 module.exports = {
     router,
+    genkey,
     init: cloudantUrl => CLOUDANT_URL = cloudantUrl
 };
